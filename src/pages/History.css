@@ -1,0 +1,267 @@
+/* ============================================================
+   History.css — PitchIt
+   ============================================================ */
+
+.hist-root {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-bg, #0a0a0a);
+  color: var(--color-text, #e9e2d5);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Main ---------- */
+.hist-main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 56px 48px 80px;
+  max-width: 1100px;
+}
+
+@media (max-width: 768px) {
+  .hist-main {
+    margin-left: 0;
+    padding: 32px 20px 60px;
+  }
+}
+
+/* ---------- Header ---------- */
+.hist-header {
+  margin-bottom: 48px;
+}
+
+.hist-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-text, #e9e2d5);
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.hist-subtitle {
+  font-size: 14px;
+  color: var(--color-text-muted, #99907c);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Clear History Button */
+.hist-btn-danger {
+  background: transparent;
+  color: #ef4444; /* bright red */
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hist-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #f87171;
+}
+
+/* ---------- Trend Chart ---------- */
+.hist-chart-card {
+  background: var(--color-surface, #16130c);
+  border: 1px solid var(--color-border-warm, #4d4636);
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.hist-chart-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted, #99907c);
+  margin: 0 0 16px;
+}
+
+.hist-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.hist-chart-dates {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--color-text-muted, #99907c);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Table ---------- */
+.hist-table-wrap {
+  border: 1px solid var(--color-border-mid, #2a2a2a);
+  overflow: hidden;
+}
+
+.hist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+}
+
+.hist-table thead tr {
+  border-bottom: 1px solid var(--color-border-mid, #2a2a2a);
+}
+
+.hist-table th {
+  padding: 12px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted, #99907c);
+  text-align: left;
+  text-transform: uppercase;
+  background: var(--color-bg, #0a0a0a);
+}
+
+.hist-row {
+  border-bottom: 1px solid var(--color-border-mid, #2a2a2a);
+  transition: background 0.18s;
+  cursor: default;
+}
+.hist-row:last-child { border-bottom: none; }
+.hist-row:hover { background: var(--color-surface, #16130c); }
+
+.hist-table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+/* Cell styles */
+.hist-cell-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted, #99907c);
+  white-space: nowrap;
+}
+
+.hist-cell-mode {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary, #d0c6b0);
+  white-space: nowrap;
+}
+
+.hist-cell-scenario {
+  font-size: 13px;
+  color: var(--color-text-muted, #99907c);
+  max-width: 280px;
+}
+
+.hist-cell-score {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-gold, #e7c353);
+}
+
+.hist-cell-result { white-space: nowrap; }
+
+/* Badges */
+.hist-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  text-transform: uppercase;
+}
+
+.hist-badge-pass {
+  background: rgba(231, 195, 83, 0.1);
+  border: 1px solid var(--color-gold, #e7c353);
+  color: var(--color-gold, #e7c353);
+}
+
+.hist-badge-improve {
+  background: rgba(139, 32, 32, 0.12);
+  border: 1px solid var(--color-danger, #8b2020);
+  color: var(--color-danger-light, #ffb4ab);
+}
+
+.hist-badge-none {
+  color: var(--color-text-muted, #99907c);
+  font-size: 12px;
+}
+
+/* Sparkline */
+.hist-cell-spark { padding-left: 8px; }
+
+.hist-spark {
+  display: block;
+  overflow: visible;
+}
+
+.hist-spark-empty {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--color-text-muted, #99907c);
+}
+
+/* ---------- Empty State ---------- */
+.hist-empty {
+  text-align: center;
+  padding: 80px 20px;
+  border: 1px solid var(--color-border-mid, #2a2a2a);
+}
+
+.hist-empty-icon {
+  font-size: 32px;
+  color: var(--color-border-warm, #4d4636);
+  margin: 0 0 20px;
+}
+
+.hist-empty-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--color-text, #e9e2d5);
+  margin: 0 0 10px;
+}
+
+.hist-empty-sub {
+  font-size: 14px;
+  color: var(--color-text-muted, #99907c);
+  margin: 0;
+}
+
+/* ---------- Load More ---------- */
+.hist-load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.hist-btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-gold, #e7c353);
+  color: var(--color-gold, #e7c353);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.hist-btn-outline:hover {
+  background: rgba(231, 195, 83, 0.08);
+}

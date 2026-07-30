@@ -1,0 +1,136 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-base);
+  padding: 24px;
+}
+
+.login-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-warm);
+  padding: 48px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.login-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.login-brand {
+  display: block;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+  letter-spacing: 0.2em;
+}
+
+.login-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.login-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  margin: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-input {
+  width: 100%;
+  background-color: var(--color-base);
+  border: 1px solid var(--color-border-mid);
+  color: var(--color-text-primary);
+  padding: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.login-input:focus {
+  border-color: var(--color-gold);
+}
+
+.form-checkbox-group {
+  margin-top: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.login-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 1px solid var(--color-border-warm);
+  background-color: var(--color-base);
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2px;
+}
+
+.login-checkbox:checked {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.login-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-base);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-text {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.checkbox-text a {
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.checkbox-text a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.login-error {
+  color: var(--color-danger);
+  font-size: 14px;
+  margin: -8px 0 0 0;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 20px;
+  margin-top: 8px;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,277 @@
+/* Landing.css */
+
+
+/* ── Top bar ─────────────────────────────────────────────── */
+.landing-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--color-border-warm, #4d4636);
+  background: var(--color-base);
+  z-index: 100;
+}
+
+.landing-topbar__brand {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold, #e7c353);
+}
+
+/* ── Bottom bar ──────────────────────────────────────────── */
+.landing-bottombar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--color-border-warm, #4d4636);
+  background: var(--color-base);
+  z-index: 100;
+}
+
+.landing-bottombar__text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ── Full-page layout ────────────────────────────────────── */
+.landing-page {
+  min-height: 100vh;
+  background: var(--color-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 44px;
+  box-sizing: border-box;
+}
+
+/* Subtle grid overlay */
+.landing-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(231, 195, 83, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 195, 83, 0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Center content ──────────────────────────────────────── */
+.landing-center {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* ── Eyebrow tag ─────────────────────────────────────────── */
+.landing-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-gold, #e7c353);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.landing-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-gold, #e7c353);
+  flex-shrink: 0;
+}
+
+/* ── Headline ────────────────────────────────────────────── */
+.landing-h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.08;
+  color: var(--color-text-primary, #e9e2d5);
+  margin: 0 0 24px;
+  white-space: pre-line;
+  letter-spacing: -0.01em;
+}
+
+.landing-h1 em {
+  font-style: italic;
+  color: var(--color-gold, #e7c353);
+}
+
+/* ── Body ────────────────────────────────────────────────── */
+.landing-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-text-secondary, #d0c6b0);
+  margin: 0 0 36px;
+  max-width: 520px;
+}
+
+/* ── Workflow steps ──────────────────────────────────────── */
+.landing-workflow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.landing-workflow__step {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface, #16130c);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.landing-workflow__step:hover {
+  color: var(--color-text-secondary, #d0c6b0);
+  border-color: var(--color-border-warm, #4d4636);
+}
+
+.landing-workflow__arrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--color-gold, #e7c353);
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+/* ── CTA Button ──────────────────────────────────────────── */
+.landing-cta {
+  width: 100%;
+  padding: 18px 32px;
+  background: var(--color-gold, #e7c353);
+  color: #0A0A0A;
+  border: none;
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.landing-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.2s ease;
+}
+
+.landing-cta:hover {
+  background: #f0d06a;
+  box-shadow: 0 0 40px rgba(231, 195, 83, 0.25), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.landing-cta:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── Sub-text ────────────────────────────────────────────── */
+.landing-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.02em;
+}
+
+/* ── Decorative corner lines ─────────────────────────────── */
+.landing-corner {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.landing-corner--tl {
+  top: 64px;
+  left: 32px;
+  border-top: 1px solid var(--color-border-warm, #4d4636);
+  border-left: 1px solid var(--color-border-warm, #4d4636);
+}
+
+.landing-corner--tr {
+  top: 64px;
+  right: 32px;
+  border-top: 1px solid var(--color-border-warm, #4d4636);
+  border-right: 1px solid var(--color-border-warm, #4d4636);
+}
+
+.landing-corner--bl {
+  bottom: 60px;
+  left: 32px;
+  border-bottom: 1px solid var(--color-border-warm, #4d4636);
+  border-left: 1px solid var(--color-border-warm, #4d4636);
+}
+
+.landing-corner--br {
+  bottom: 60px;
+  right: 32px;
+  border-bottom: 1px solid var(--color-border-warm, #4d4636);
+  border-right: 1px solid var(--color-border-warm, #4d4636);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .landing-h1 {
+    font-size: 40px;
+  }
+
+  .landing-topbar {
+    padding: 0 20px;
+  }
+
+  .landing-topbar__brand {
+    font-size: 9px;
+  }
+}
