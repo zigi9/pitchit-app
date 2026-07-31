@@ -1,16 +1,31 @@
-# React + Vite
+# Pitch It – AI-Powered Presentation Coach
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Pitch It is an advanced, AI-driven web application designed to help executives, founders, and students perfect their presentation skills. 
 
-Currently, two official plugins are available:
+Whether you're preparing for a **TEDx Talk**, a **VC Investor Pitch**, or an **Academic Defense**, Pitch It listens to your speech, analyzes your delivery in real-time, and provides ruthless, actionable feedback.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
 
-## React Compiler
+*   **Dynamic Scenarios:** Choose from predefined scenarios (Investor, Academic, TEDx) or create a custom one.
+*   **AI Persona Rigor:** Select how harsh the feedback should be (Standard, Strict, Executive).
+*   **Real-time Analysis:** Uses the Web Speech API for voice transcription and Groq AI for lightning-fast feedback generation.
+*   **Competency Breakdown:** Tracks your progress over time across 8 core metrics (Structure, Body Language, Persuasion, etc.).
+*   **Executive Precision Design:** A sleek, premium, dark-mode user interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the Oxlint configuration
+*   **Frontend:** React (Vite)
+*   **Styling:** Custom CSS (Executive Precision System)
+*   **Backend / Serverless:** Netlify Functions
+*   **AI Engine:** Groq API (LLaMA 3)
+*   **Deployment:** Netlify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📝 Setup for Local Development
+
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Create a `.env` file in the root directory and add your `GROQ_API_KEY`.
+4. Run `npm run dev` to start the local server.
+
+---
+*Built for the 2026 Student Hackathon.*
