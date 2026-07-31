@@ -29,3 +29,4 @@ Whether you're preparing for a **TEDx Talk**, a **VC Investor Pitch**, or an **A
 
 ---
 *Built for the 2026 Student Hackathon.*
+
